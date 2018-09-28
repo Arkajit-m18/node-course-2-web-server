@@ -52,6 +52,12 @@ app.get('/about', (request, response) => {
         pageTitle: 'About Page'
     });
 });
+app.get('/projects', (request, response)=> {
+    response.render('projects.hbs', {
+        pageTitle: 'Projects Page',
+        pageMessage: 'Portfolio Page Here:'
+    });
+});
 app.get('/bad', (request, response) => {
     response.send({
         errorMessage: 'Unable to fetch any data.'
